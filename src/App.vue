@@ -14,6 +14,8 @@ const instructor = reactive({
   email: 'john@example.com',
 })
 console.log(instructor)
+const vueURL = 'https://vuejs.org'
+const vueId = ref('vue-url')
 </script>
 
 <template>
@@ -23,6 +25,9 @@ console.log(instructor)
     Instructor age is: {{ instructor.age }}
     <button @click="incrementAge">Increment</button>
   </h2>
+  <!-- <a :id="vueId" :href="vueURL">Vue URL</a> -->
+  <!-- 省略記法 -->
+  <a v-bind="{ id: vueId, href: vueURL }">Vue URL</a>
 </template>
 
 <style scoped>
