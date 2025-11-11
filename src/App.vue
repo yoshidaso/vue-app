@@ -16,6 +16,11 @@ const instructor = reactive({
 console.log(instructor)
 const vueURL = 'https://vuejs.org'
 const vueId = ref('vue-url')
+const vOnClickCount = ref(0)
+const vOnClickIncrement = () => {
+  vOnClickCount.value++
+}
+const eventName = 'keyup.k'
 </script>
 
 <template>
@@ -28,6 +33,16 @@ const vueId = ref('vue-url')
   <!-- <a :id="vueId" :href="vueURL">Vue URL</a> -->
   <!-- 省略記法 -->
   <a v-bind="{ id: vueId, href: vueURL }">Vue URL</a>
+
+  <p>Count is: {{ vOnClickCount }}</p>
+  <button @click="vOnClickCount++">V-ON-Click Increment</button>
+  <button @click="vOnClickIncrement">V-ON-Click Function Increment</button>
+
+  <div>
+    <input type="text" @keyup.k="count++" />
+    <input type="text" @[eventName]="count++" />
+    <p>Count is: {{ count }}</p>
+  </div>
 </template>
 
 <style scoped>
