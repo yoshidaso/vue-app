@@ -29,5 +29,8 @@ coverage
 
 *.tsbuildinfo
 
+# Auto-generated type definitions
+components.d.ts
+
 test-results/
 playwright-report/
