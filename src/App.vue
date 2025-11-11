@@ -43,6 +43,8 @@ const eventName = 'keyup.k'
     <input type="text" @[eventName]="count++" />
     <p>Count is: {{ count }}</p>
   </div>
+
+  <vModel />
 </template>
 
 <style scoped>
