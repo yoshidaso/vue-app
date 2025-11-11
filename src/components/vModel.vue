@@ -1,4 +1,11 @@
+<script setup lang="ts">
+import { ref } from 'vue'
+
+const userName = ref('')
+</script>
+
 <template>
-  <input type="text" />
-  <div>test</div>
+  <p>User Name is: {{ userName }}</p>
+  <input type="text" v-model="userName" />
+  <button @click="userName = ''">Clear</button>
 </template>
