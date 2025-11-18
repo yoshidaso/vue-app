@@ -45,6 +45,7 @@ const eventName = 'keyup.k'
   </div>
 
   <vModel />
+  <ComputedExample />
 </template>
 
 <style scoped>

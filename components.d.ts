@@ -12,6 +12,7 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
+    ComputedExample: typeof import('./src/components/ComputedExample.vue')['default']
     IconCommunity: typeof import('./src/components/icons/IconCommunity.vue')['default']
     IconDocumentation: typeof import('./src/components/icons/IconDocumentation.vue')['default']
     IconEcosystem: typeof import('./src/components/icons/IconEcosystem.vue')['default']
@@ -25,12 +26,14 @@ declare module 'vue' {
 
 // For TSX support
 declare global {
-  const IconCommunity: typeof import('./src/components/icons/IconCommunity.vue')['default']
-  const IconDocumentation: typeof import('./src/components/icons/IconDocumentation.vue')['default']
-  const IconEcosystem: typeof import('./src/components/icons/IconEcosystem.vue')['default']
-  const IconSupport: typeof import('./src/components/icons/IconSupport.vue')['default']
-  const IconTooling: typeof import('./src/components/icons/IconTooling.vue')['default']
-  const RouterLink: typeof import('vue-router')['RouterLink']
-  const RouterView: typeof import('vue-router')['RouterView']
-  const VModel: typeof import('./src/components/vModel.vue')['default']
+  const Computed: (typeof import('./src/components/computed.vue'))['default']
+  const ComputedExample: (typeof import('./src/components/ComputedExample.vue'))['default']
+  const IconCommunity: (typeof import('./src/components/icons/IconCommunity.vue'))['default']
+  const IconDocumentation: (typeof import('./src/components/icons/IconDocumentation.vue'))['default']
+  const IconEcosystem: (typeof import('./src/components/icons/IconEcosystem.vue'))['default']
+  const IconSupport: (typeof import('./src/components/icons/IconSupport.vue'))['default']
+  const IconTooling: (typeof import('./src/components/icons/IconTooling.vue'))['default']
+  const RouterLink: (typeof import('vue-router'))['RouterLink']
+  const RouterView: (typeof import('vue-router'))['RouterView']
+  const VModel: (typeof import('./src/components/vModel.vue'))['default']
 }
